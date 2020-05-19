@@ -167,6 +167,7 @@
         data-autoplay="10"
       >
         <q>您是否已经 <b>厌倦了</b> 这些都是基于幻灯片的演示 ?</q>
+        <a href="https://github.com/xxholly32/impress-demo">本项目地址</a>
       </div>
 
       <!--
