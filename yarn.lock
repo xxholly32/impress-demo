@@ -4179,6 +4179,11 @@ import-local@^2.0.0:
     pkg-dir "^3.0.0"
     resolve-cwd "^2.0.0"
 
+impress.js@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/impress.js/-/impress.js-1.1.0.tgz#2a056e7ac51855ff7b5188bf1520d429a73b3544"
+  integrity sha512-APQNnZx1M8RBe9vHdNAiAbIz4MaL0UDqIj0BDJOeFLqI/529/lGMmiz0m/c82xC08tBq8n9JzpMNoDykq0Zckg==
+
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npm.taobao.org/imurmurhash/download/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
