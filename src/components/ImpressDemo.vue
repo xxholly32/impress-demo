@@ -124,8 +124,7 @@
       data-max-scale="3"
       data-min-scale="0"
       data-perspective="1000"
-    >
-      <!-- data-autoplay="7"> -->
+      data-autoplay="7"> -->
 
       <!--
         
