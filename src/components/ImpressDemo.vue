@@ -1,16 +1,80 @@
 <template>
   <div>
     <!--
-        For example this fallback message is only visible when there is `impress-not-supported` class on body.
+        以下内容都来自与 https://github.com/impress/impress.js/blob/master/index.html
+        翻译 xiangxiao
+    -->
+    <!--
+
+        欢迎来到光明之源，年轻的绝地学徒。
+
+        还差一步就要学到你感兴趣的东西了....
+
+                                  ____                  
+                                _.' :  `._               
+                            .-.'`.  ;   .'`.-.           
+                  __      / : ___\ ;  /___ ; \      __  
+                ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
+                :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
+                      `:-.._J '-.-'L__ `-.-' L_..-;'     
+                        "-.__ ;  .-"  "-.  : __.-"       
+                            L ' /.======.\ ' J           
+                            "-.   "__"   .-"            
+                            __.l"-:_JL_;-";.__           
+                        .-j/'.;  ;""""  / .'\"-.        
+                      .' /:`. "-.:     .-" .';  `.      
+                    .-"  / ;  "-. "-..-" .-"  :    "-.   
+                .+"-.  : :      "-.__.-"      ;-._   \  
+                ; \  `.; ;                    : : "+. ; 
+                :  ;   ; ;                    : ;  : \: 
+                ;  :   ; :                    ;:   ;  : 
+                : \  ;  :  ;                  : ;  /  :: 
+                ;  ; :   ; :                  ;   :   ;: 
+                :  :  ;  :  ;                : :  ;  : ; 
+                ;\    :   ; :                ; ;     ; ; 
+                : `."-;   :  ;              :  ;    /  ; 
+                ;    -:   ; :              ;  : .-"   : 
+                :\     \  :  ;            : \.-"      : 
+                  ;`.    \  ; :            ;.'_..-=  / ; 
+                  :  "-.  "-:  ;          :/."      .'  :
+                  \         \ :          ;/  __        :
+                    \       .-`.\        /t-""  ":-+.   :
+                    `.  .-"    `l    __/ /`. :  ; ; \  ;
+                      \   .-" .-"-.-"  .' .'j \  /   ;/ 
+                        \ / .-"   /.     .'.' ;_:'    ;  
+                        :-""-.`./-.'     /    `.___.'   
+                              \ `t  ._  /               
+                                "-.t-._:'                
+
+    -->
+
+    <!--
+        你想知道如何使用impress.js?
+
+        您已经完成了第一个非常重要的步骤 — 阅读源代码。
+        这就是如何建立impress.js实例的 - 用HTML和CSS代码构建。
+
+        相信我，你需要相当不错的HTML和CSS技能，才能有效地使用impress.js。
+        更重要的是，你需要成为一名设计师。impress.js中没有默认的样式和布局。
+
+        你需要用你的想象力去设计和建造它。
+
+        所以…
+
+        你还想知道如何使用impress.js吗?
+
+        我们开始吧
+    -->
+    <!--
+        例如，此回退消息仅在body上有 “impress-not-supported” 类时才可见。
     -->
     <div class="fallback-message">
       <p>
-        Your browser <b>doesn't support the features required</b> by impress.js,
-        so you are presented with a simplified version of this presentation.
+        你的浏览器 <b>不支持impress.js</b>, 所以你会看到这个演讲的简化版本。
       </p>
       <p>
-        For the best experience please use the latest <b>Chrome</b>,
-        <b>Safari</b> or <b>Firefox</b> browser.
+        为了获得最好的体验，请使用最新版本 <b>Chrome</b>, <b>Safari</b> or
+        <b>Firefox</b> 浏览器.
       </p>
     </div>
 
@@ -25,26 +89,33 @@
 
     To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
     a number of ms. It defaults to 1000 (1s).
-    
-    When authoring impress.js presentations, you should target some screen size, which you can define here.
-    The default is 1024 x 768. You should write your CSS as if this is the screen size used for the
-    presentation. When you present your presentation on a screen (or browser window) of different size,
-    impress.js will automatically scale the presentation to fit the screen. The minimum and maximum limits
-    to this scaling can also be defined here.
-    
-    NOTE: I intend to change the defaults to target HD screens in 2021. So you may want to make a habit
-    of explicitly defining these attributes for now, to avoid any disruption when the defaults change.
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
+
+    这就是impress.js使用的核心部分。
+
+    这就是演示步骤的最外层。在这个元素中，所有的 impress.js 魔术都会发生。
+    它不需要是' <div> '这里只有“id”重要，因为脚本就是这样找到它的。
+
+    通常您不需要在这里使用任何属性，但是出于教学的目的，我在下面使用了所有这些属性。
+
+    要更改幻灯片之间转换的持续时间，请使用 `data-transition-duration=“2000”` 这里单位是ms 默认值为1000(1秒)。
+
+    在编写impress.js演示文稿时，您应该以屏幕大小为目标，您可以在这里定义屏幕大小。
+    默认值是1024 x 768。你应该写你的CSS好像这是屏幕大小用于 演示。当你在不同大小的屏幕(或浏览器窗口)上展示演示文稿时，
+    impress.js会自动缩放显示以适应屏幕。最小和最大极限 这个比例也可以在这里定义。
+
+    注: 我打算在2021年将默认设置改为目标高清屏幕。所以你可能需要习惯定义这些属性，以避免在更改默认值时出现任何中断。
+
+    您还可以使用 “data-perspective="500"” 来控制透视图，并给它设置一些像素。
+    默认值是1000。如果你不想要任何3D效果，你可以把它设为0。
+    如果你想要改变这个值，请确保你理解CSS透视图是如何工作的:
     https://developer.mozilla.org/en/CSS/perspective
     
-    Plugins:
-    
-    We set the default time for autoplay plugin to 7 seconds. Autoplay will automatically advance
-    to next slide after a timeout expires.
--->
+    插件:
+
+    我们将autoplay plugin的默认时间设置为7秒。自动播放将自动前进
+    超时后的下一张幻灯片。
+
+    -->
     <div
       id="impress"
       data-transition-duration="1000"
@@ -71,9 +142,21 @@
         will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
         
         It will not be rotated or scaled.
+
+        有趣的事情发生了。
+
+        演示的每个步骤都应该是“#impress”中带有类名的一个元素“步骤”。这些阶跃元素通过impress定位、旋转和缩放。impress.js和
+        “镜头”会在演示的每一步向他们展示。
+
+        定位每个步骤是通过数据属性传递。
+
+        在下面的例子中，我们只指定了带有`data-x="-1000"` `data-y="-1500"`的step元素的x和y位置和数据属性。这意味着**元素的中心**(是的，中心)
+        将被定位在演示“画布”的 x = -1000px 和 y = -1500px 处。
+
+        它不会被旋转或缩放。只是平移。
         
         --------
-        Plugins: For first slide, set the autoplay time to a custom 10 seconds.
+        插件: 和一开始的配置不同，这里自动播放时间被调整为10秒。
         
     -->
       <div
@@ -83,66 +166,56 @@
         data-y="-1500"
         data-autoplay="10"
       >
-        <q
-          >Aren’t you just <b>bored</b> with all those slides-based
-          presentations?</q
-        >
+        <q>您是否已经 <b>厌倦了</b> 这些都是基于幻灯片的演示 ?</q>
       </div>
 
       <!--
-        
-        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
-        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
-        
-        So in the example below it'll be `step-2`.
-        
-        The hash part of the url when this step is active will be `#/step-2`.
-        
-        You can also use `#step-2` in a link, to point directly to this particular step.
-        
-        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
-        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
-        
+               
+        step元素的' id '属性用于在URL中标识它，但它是可选的。
+        如果没有定义，它将得到一个默认值' step-N '，其中N是幻灯片的个数。
+
+        所以在下面的例子中，它是“step 2”。
+
+        当这个步骤被激活时，url的哈希部分将是' #/step-2 '。
+
+        你也可以在链接中使用“#step-2”来直接指向这个特定的步骤。
+
+        请注意，虽然' #/step-2 '(带斜杠)也适用于链接，但不建议这样做。
+        使用传统的基于“id”的链接，比如“#step-2”，可以使这些链接在回退模式下也可以使用。
     -->
       <div class="step slide" data-x="0" data-y="-1500">
         <q
-          >Don’t you think that presentations given
-          <strong>in modern browsers</strong> shouldn’t
-          <strong>copy the limits</strong> of ‘classic’ slide decks?</q
+          >您不认为传统的经典演示模版 <strong>在现代浏览器中</strong> 不应该
+          <strong>受到设计的限制</strong> ?</q
         >
       </div>
 
       <div class="step slide" data-x="1000" data-y="-1500">
         <q
-          >Would you like to <strong>impress your audience</strong> with
-          <strong>stunning visualization</strong> of your talk?</q
+          >你想在你的演讲中加入更多的<strong>视觉冲击</strong>，
+          来<strong>提升你的演讲效果</strong>么？</q
         >
       </div>
 
       <!--
+
+        这是一个元素被缩放的例子。
+
+        同样，我们使用' data- '属性，这次是' data-scale="4" '，所以它的意思是这样的
+        元素的大小是其他元素的4倍。从展示和过渡的角度来看，它意味着，它将被缩放(4倍)使它回到正确的大小。
         
-        This is an example of step element being scaled.
-        
-        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-        element will be 4 times larger than the others.
-        From presentation and transitions point of view it means, that it will have to be scaled
-        down (4 times) to make it back to its correct size.
-        
-    -->
+      -->
       <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
+        <span class="try">当你使用</span>
         <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+        <span class="footnote"><sup>*</sup> 你的想象将不受限制</span>
       </div>
 
       <!--
-        
-        This element introduces rotation.
-        
-        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-        element should be rotated by 90 degrees clockwise.
-        
-    -->
+        下面的例子引入了旋转。
+
+        我们使用' data-rotate="90"属性，这意味着元素都顺时针旋转90度。
+      -->
       <div
         id="its"
         class="step"
@@ -152,12 +225,11 @@
         data-scale="5"
       >
         <p>
-          It’s a <strong>presentation tool</strong> <br />
-          inspired by the idea behind <a href="http://prezi.com">prezi.com</a>
+          这是一个 <strong>展示工具</strong> <br />
+          理念来源于 <a href="http://prezi.com">prezi.com</a>
           <br />
-          and based on the
-          <strong>power of CSS3 transforms and transitions</strong> in modern
-          browsers.
+          以及基于现代浏览器中
+          <strong>CSS3 的 transforms 和 transitions特性.</strong>
         </p>
       </div>
 
@@ -169,7 +241,7 @@
         data-rotate="180"
         data-scale="6"
       >
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+        <p>可以满足您 <b>无穷</b> <span class="thoughts">的创意</span></p>
       </div>
 
       <!--
@@ -180,7 +252,12 @@
         `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
         positioned far away from us (by 3000px).
         
-    -->
+       介绍第三纬度的实现，是否很兴奋
+
+        除了“data-x”和“data-y”之外，还可以定义第三(Z)轴上的位置
+        “data-z”。在下面的例子中，我们使用了' data-z="-3000" '，意思是该元素应该是
+        距离我们(3000px) 远。
+      -->
       <div
         id="tiny"
         class="step"
@@ -190,32 +267,24 @@
         data-rotate="300"
         data-scale="1"
       >
-        <p>and <b>tiny</b> ideas</p>
+        <p>或者 <b>很小的</b> idea</p>
       </div>
 
       <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-        Note: data-x/y/z attributes, if not defined, by default will inherit the value of the 
-        previous step. So to get back to 0 on the z-axis, we must set it to 0.
-        See src/plugins/rel/README.md for more information.
-        
+        在下面这个演示中并没有加入任何data属性，但你可以注意到这段文字的一些字在变化。
+        这其实是一个非常基本的CSS转换，当这个step元素被创建时候会触发。
+
+        在演示的一开始，所有的步骤元素都被指定为“future”类。这意味着他们其实都还没有被访问过。
+
+        当演示移动到给定步骤“future”时，将更改为“present”类名。
+        这就是这个步骤的动画工作原理——当这个步骤有“present”类时，文本就会移动。
+
+        最后，当这一步离开时，' present '类将从元素和' past '中删除。        
+
+        所以基本上每个步骤都有三个类:“future”、“present”和“past”。
+        只有一个当前步骤具有“present”类。
+
+        注意:data-x/y/z属性，如果没有定义，默认情况下将继承前一步。为了在z轴上回到0，我们必须把它设为0。
     -->
       <div
         id="ing"
@@ -227,9 +296,8 @@
         data-scale="6"
       >
         <p>
-          by <b class="positioning">positioning</b>,
-          <b class="rotating">rotating</b> and
-          <b class="scaling">scaling</b> them on an infinite canvas
+          <b class="positioning">位置</b>, <b class="rotating">角度</b> 和
+          <b class="scaling">缩放比例</b> 都可以在画布上调节
         </p>
       </div>
 
@@ -241,7 +309,9 @@
         data-scale="6"
       >
         <p>
-          the only <b>limit</b> is your <b class="imagination">imagination</b>
+          在这里唯一的 <b>限制</b> 是您的
+          <br />
+          <b class="imagination">想象力</b>
         </p>
       </div>
 
@@ -253,9 +323,9 @@
         data-rotate="20"
         data-scale="4"
       >
-        <p>want to know more?</p>
+        <p>想知道更多?</p>
         <q
-          ><a href="http://github.com/impress/impress.js">use the source</a>,
+          ><a href="http://github.com/impress/impress.js">去看源码吧</a>,
           Luke!</q
         >
       </div>
@@ -267,19 +337,17 @@
         data-y="4000"
         data-scale="2"
       >
-        <p>one more thing...</p>
+        <p>还有一件事...</p>
       </div>
 
       <!--
-        
-        And the last one shows full power and flexibility of impress.js.
-        
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-        
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
+        最后一个则充分体现了js的强大功能和灵活性。
+
+        你不仅可以在3D中定位元素，还可以在任何轴上旋转它。
+        所以这个例子会绕X轴旋转-40度(逆时针40度绕Y轴10度(顺时针)。
+
+        当然，你可以用“data-rotate-z”将它绕Z轴旋转——效果完全一样
+        作为“data-rotate”(这两个基本上是别名)。
         
     -->
       <div
@@ -293,28 +361,26 @@
         data-scale="2"
       >
         <p>
-          <span class="have">have</span> <span class="you">you</span>
-          <span class="noticed">noticed</span> <span class="its">it’s</span>
-          <span class="in">in</span> <b>3D<sup>*</sup></b
+          <span class="have">是否</span> <span class="you">您</span>
+          <span class="noticed">注意到</span> <span class="its">它</span>
+          <span class="in">处于</span> <b>3D 模式<sup>*</sup></b
           >?
         </p>
         <span class="footnote">* beat that, prezi ;)</span>
       </div>
 
-      <!--
-        
-        So to summarize of all the possible attributes used to position presentation steps, we have:
-        
-        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-            the canvas in pixels; their default value is 0;
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-            are exactly the same;
-        * `data-scale` - defines the scale of step element; default value is 1
-        
-        These values are used by impress.js in CSS transformation functions, so for more information consult
+      <!--        
+        因此，总结所有可能用于定位表示步骤的属性，我们有:
+
+        * ' data-x '， ' data-y '， ' data-z ' -它们定义了** 画布的中心**的位置，以像素为单位;默认值为0;
+
+        * ‘data-rotate-x’，‘data-rotate-y’，‘data-rotate-z’，‘data-rotate’——它们定义了
+        以度为单位的给定轴周围的元素;默认值为0;“data-rotate”和“data-rotate-z”
+        完全一样;
+        *‘data-scale’—定义画布的大小比例;默认值为1
+
+        js在CSS转换函数中使用这些值，更多信息请参考
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
-        
     -->
       <div
         id="overview"
@@ -327,40 +393,49 @@
     </div>
 
     <!--
-    This is a UI plugin. You can read more about plugins in src/plugins/README.md.
-    For now, I'll just tell you that this adds some graphical controls to navigate the
-    presentation. In the CSS file you can style them as you want. We've put them bottom right.
--->
+        这是一个UI插件。你可以在https://github.com/impress/impress.js/tree/master/src/plugins中了解更多关于插件的信息。
+        现在，我只告诉您它添加了一些图形化控件来导航
+        演示。在CSS文件中，你可以根据自己的喜好设置样式。我们把它们放在右下角。
+    -->
     <div id="impress-toolbar"></div>
 
     <!--
     
-    Hint is not related to impress.js in any way.
-    
-    But it can show you how to use impress.js features in creative way.
-    
-    When the presentation step is shown (selected) its element gets the class of "active" and the body element
-    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
-    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
-    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
-    
-    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
-    the first step of presentation is visible for a couple of seconds.
-    
-    ...
-    
-    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
-    It's just a quick and dirty workaround to get different hint text for touch devices.
-    In a real world it should be at least placed in separate JS file ... and the touch content should be
-    probably just hidden somewhere in HTML - not hard-coded in the script.
-    
-    Just sayin' ;)
-    
--->
+      Hint is not related to impress.js in any way.
+      
+      But it can show you how to use impress.js features in creative way.
+      
+      When the presentation step is shown (selected) its element gets the class of "active" and the body element
+      gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+      so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+      the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+      
+      This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+      the first step of presentation is visible for a couple of seconds.
+      
+      ...
+      
+      And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+      It's just a quick and dirty workaround to get different hint text for touch devices.
+      In a real world it should be at least placed in separate JS file ... and the touch content should be
+      probably just hidden somewhere in HTML - not hard-coded in the script.
+      
+      Just sayin' ;)
+
+      Hint与impress.js没有任何关系。
+
+      但它可以向您展示如何创造性地使用impress.js特性。
+
+      当表示步骤显示(选中)时，它的元素获得“active”类和body元素获取基于活动的步骤“impress-on-id”的类(其中id是该步骤的id)…也许不是
+      这么清楚是因为前面所有这些“id”的句子，所以举个例子当第一步id (' bored ')是活动的，body元素得到一个类' impress-on-bored '。
+
+      这个类由下面的提示使用。检查CSS文件，看看它是如何显示与延迟的CSS动画时，演示的第一步在几秒钟内是可见的。
+      
+  -->
     <div class="hint">
       <p>
-        Use a spacebar or arrow keys to navigate. <br />
-        Press 'P' to launch speaker console.
+        使用空格键或方向键进行导航。 <br />
+        按 “P” 启动控制台。
       </p>
     </div>
   </div>
